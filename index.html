@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <title>My PWA App</title>
+</head>
+<body>
+  <h1>Hello from your PWA!</h1>
+  <p>This app works offline and can be installed.</p>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker Registered'));
+    }
+  </script>
+</body>
+</html>
